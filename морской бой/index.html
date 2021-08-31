@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <title>Морской бой</title>
+</head>
+<body>
+  <div id="head"> 
+      <h1 class="heading">Морской бой с компьютером!</h1>
+      <p class="subtitle" href="#">команда ждет Вас, мой адмирал!</p>
+  </div>
+    <div class="center">
+        <div data-side="player"></div>
+        <div class="center_menu">
+            <div class="menu_btn" data-scene="preparation">
+        <button class="btn" data-computer="simple" disabled>Легко</button>
+        <button class="btn" data-computer="middle" disabled>Нормально</button>
+        <button class="btn" data-computer="hard" disabled>Сложно</button>
+        <button class="btn" data-action="manually">Расставить корабли вручную</button>
+        <button class="btn" data-action="randomize">Расставить автоматически</button>
+        
+            </div>
+    <div class="menu_btn hidden" data-scene="computer" >
+        <div class="battlefield-status">Твой ход</div>
+        <button class="btn" data-action="gaveup">Покинуть битву!</button>
+        <button class="btn" data-action="again">Играть еще раз</button>
+    </div>
+</div>
+    <div data-side="opponent"> </div>
+    </div>
+    <script src="js/additional.js"></script>
+    <script src="js/Mouse.js"></script>
+    <script src="js/Application.js"></script>
+
+    <script src="js/Scene.js"></script>
+    <script src="js/scenes/PreparationScene.js"></script>
+    <script src="js/scenes/ComputerScene.js"></script>
+
+    <script src="js/Battlefield.js"></script>
+    <script src="js/BattlefieldView.js"></script>
+    
+    <script src="js/Ship.js"></script>
+    <script src="js/ShipView.js"></script>
+
+    <script src="js/Shot.js"></script>
+    <script src="js/ShotView.js"></script>
+
+    <script src="js/script.js"></script>
+  
+</body>
+</html>

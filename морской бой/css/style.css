@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+#head{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    font-family:  'Neucha', cursive;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.heading{
+    font-size: 60px;
+}
+.subtitle{
+    text-decoration: none;
+    font-size: 40px;
+    color: rgb(98, 55, 139)
+}
+
+.center{
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.center_menu{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    height: 330px;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    width: 260px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-family:  'Neucha', cursive;
+    font-size: 20px;
+    color: rgb(106, 6, 126);
+}
+
+.battlefield{
+    position: relative;
+	color: red;
+	font-family:  'Neucha', cursive;
+}
+
+.battlefield-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	background: rgba(54, 40, 250, 0.432);
+}
+
+.battlefield-item {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: 1px solid rgba(6, 25, 247, 0.15);
+}
+
+.battlefield-item__active{
+	background: rgba(255, 0, 0, 0.486);
+}
+
+.marker {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.marker-row {
+	left: -35px;
+}
+
+.marker-column {
+	top: -35px;
+}
+
+.ship {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 3px solid #e5ff0083;
+	background: rgba(255, 38, 0, 0.637);
+	width: 32px;
+	height: 32px;
+	border-radius: 10px;
+}
+
+.ship-row-1 {
+}
+
+.ship-row-2 {
+	width: 65px;
+}
+
+.ship-row-3 {
+	width: 98px;
+}
+
+.ship-row-4 {
+	width: 131px;
+}
+
+.ship-column-1 {
+}
+
+.ship-column-2 {
+	height: 65px;
+}
+
+.ship-column-3 {
+	height: 98px;
+}
+
+.ship-column-4 {
+	height: 131px;
+}
+
+
+
+.shot {
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.shot-missed {
+	color: gray;
+}
+
+.shot-wounded {
+	background: #fbdede;
+	z-index: 1;
+}
+
+.shot-wounded::after {
+	content: " ";
+	width: calc(32px * 1.3);
+	height: calc(32px * 1.3);
+	border-top: 2px solid red;
+	position: absolute;
+	z-index: -1;
+	transform: rotate(45deg);
+	top: 9px;
+	left: -20px;
+}
+
+.shot-wounded::before {
+	content: " ";
+	width: calc(32px * 1.3);
+	height: calc(32px * 1.3);
+	border-top: 2px solid red;
+	position: absolute;
+	z-index: -1;
+	transform: rotate(-45deg);
+	top: 9px;
+	left: 9px;
+}
+
+.shot-killed {
+	margin: -2px;
+	border: 2px solid red;
+}
+
+.hidden {
+	display: none;
+}
